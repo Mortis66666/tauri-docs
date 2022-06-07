@@ -157,7 +157,7 @@ struct MyState(String);
 
 #[tauri::command]
 fn my_custom_command(state: tauri::State<MyState>) {
-  assert_eq!(state.0 == "some state value", true);
+  assert!(state.0 == "some state value");
 }
 
 fn main() {
